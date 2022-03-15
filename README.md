@@ -7,3 +7,5 @@ http://katzkawai.github.io
 http://katzkawai.org/
 
 にリダイレクトされます。
+
+## メモ
