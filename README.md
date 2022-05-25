@@ -8,4 +8,6 @@ https://katzkawai.org/
 
 にリダイレクトされます。
 
-## メモ
+## 日記レポジトリ
+
+https://github.com/katzkawai/nikki01
