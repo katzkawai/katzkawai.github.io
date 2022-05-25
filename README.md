@@ -1,10 +1,10 @@
 # katzkawai.github.io
 
-http://katzkawai.github.io
+https://katzkawai.github.io
 
 は
 
-http://katzkawai.org/
+https://katzkawai.org/
 
 にリダイレクトされます。
 
