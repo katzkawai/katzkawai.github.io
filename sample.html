@@ -4,10 +4,135 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample</title>
+    <title>派手なサンプルページ</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(45deg, #ff00cc, #3333ff, #00ffcc, #ffcc00);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            font-family: 'Potta One', cursive;
+            color: white;
+            text-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        @keyframes gradient {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+        
+        .container {
+            text-align: center;
+            padding: 2rem;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+            transform: rotate(-3deg);
+            transition: all 0.3s ease;
+            max-width: 80%;
+        }
+        
+        .container:hover {
+            transform: rotate(3deg) scale(1.05);
+        }
+        
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-30px);}
+            60% {transform: translateY(-15px);}
+        }
+        
+        p {
+            font-size: 1.8rem;
+            margin-top: 1rem;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from {text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff00de, 0 0 20px #ff00de;}
+            to {text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff00de, 0 0 40px #ff00de;}
+        }
+        
+        .stars {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            animation: twinkle 1s infinite alternate;
+        }
+        
+        @keyframes twinkle {
+            from {opacity: 0.2;}
+            to {opacity: 1;}
+        }
+        
+        .emoji {
+            font-size: 3rem;
+            margin: 0.5rem;
+            display: inline-block;
+            animation: spin 3s linear infinite;
+        }
+        
+        @keyframes spin {
+            from {transform: rotate(0deg);}
+            to {transform: rotate(360deg);}
+        }
+    </style>
 </head>
 <body>
-  <h1>こんにちは世界</h1>
-  <p>本サイトは現在構築中です。</p>
+    <div class="stars" id="stars"></div>
+    <div class="container">
+        <h1>こんにちは世界</h1>
+        <div>
+            <span class="emoji">✨</span>
+            <span class="emoji">🎉</span>
+            <span class="emoji">🌈</span>
+        </div>
+        <p>本サイトは現在構築中です。</p>
+        <div>
+            <span class="emoji">🚀</span>
+            <span class="emoji">💫</span>
+            <span class="emoji">🔥</span>
+        </div>
+    </div>
+
+    <script>
+        // 星を作成する
+        const starsContainer = document.getElementById('stars');
+        for (let i = 0; i < 100; i++) {
+            const star = document.createElement('div');
+            star.classList.add('star');
+            star.style.width = `${Math.random() * 5}px`;
+            star.style.height = star.style.width;
+            star.style.left = `${Math.random() * 100}%`;
+            star.style.top = `${Math.random() * 100}%`;
+            star.style.animationDuration = `${Math.random() * 2 + 0.5}s`;
+            star.style.animationDelay = `${Math.random() * 2}s`;
+            starsContainer.appendChild(star);
+        }
+    </script>
 </body>
 </html>
