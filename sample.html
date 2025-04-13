@@ -4,25 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>派手なサンプルページ</title>
+    <title>派手なサンプルページ - Katz Kawai's GitHub Pages</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
         
         body {
+            font-family: 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
             margin: 0;
             padding: 0;
+        }
+        
+        .navbar-brand {
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        
+        .content-main {
             background: linear-gradient(45deg, #ff00cc, #3333ff, #00ffcc, #ffcc00);
             background-size: 400% 400%;
             animation: gradient 15s ease infinite;
             font-family: 'Potta One', cursive;
             color: white;
             text-shadow: 3px 3px 5px rgba(0,0,0,0.5);
-            height: 100vh;
+            min-height: 80vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            overflow: hidden;
+            padding: 2rem 0;
         }
         
         @keyframes gradient {
@@ -31,7 +42,7 @@
             100% {background-position: 0% 50%;}
         }
         
-        .container {
+        .container-fancy {
             text-align: center;
             padding: 2rem;
             background-color: rgba(255, 255, 255, 0.2);
@@ -41,13 +52,14 @@
             transform: rotate(-3deg);
             transition: all 0.3s ease;
             max-width: 80%;
+            margin: 2rem auto;
         }
         
-        .container:hover {
+        .container-fancy:hover {
             transform: rotate(3deg) scale(1.05);
         }
         
-        h1 {
+        h1.fancy-title {
             font-size: 4rem;
             margin-bottom: 1rem;
             animation: bounce 2s infinite;
@@ -59,7 +71,7 @@
             60% {transform: translateY(-15px);}
         }
         
-        p {
+        p.fancy-text {
             font-size: 1.8rem;
             margin-top: 1rem;
             animation: glow 2s ease-in-out infinite alternate;
@@ -100,24 +112,90 @@
             from {transform: rotate(0deg);}
             to {transform: rotate(360deg);}
         }
+        
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+        }
     </style>
 </head>
 <body>
-    <div class="stars" id="stars"></div>
-    <div class="container">
-        <h1>こんにちは世界</h1>
-        <div>
-            <span class="emoji">✨</span>
-            <span class="emoji">🎉</span>
-            <span class="emoji">🌈</span>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">KKLab</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">ホーム</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="sampleDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            サンプル
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="sampleDropdown">
+                            <a class="dropdown-item active" href="sample.html">派手なサンプル <span class="sr-only">(current)</span></a>
+                            <a class="dropdown-item" href="https://tangible-discreet-freon.glitch.me">クリティカルシンキング</a>
+                            <a class="dropdown-item" href="https://alert-invincible-activity.glitch.me">ロジカルシンキング</a>
+                            <a class="dropdown-item" href="https://catnip-sumptuous-crime.glitch.me">コンテナ革命</a>
+                            <a class="dropdown-item" href="https://faithful-teal-beak.glitch.me">我が家の愛犬</a>
+                            <a class="dropdown-item" href="https://luxurious-rambunctious-chickadee.glitch.me/">PWA</a>
+                            <a class="dropdown-item" href="https://clock-sample-katzkawai.replit.app/">React</a>
+                            <a class="dropdown-item" href="https://meteor-understood-soil.glitch.me">シンプルなカレンダー</a>
+                            <a class="dropdown-item" href="https://lava-necessary-chord.glitch.me">名古屋一泊二日観光プラン</a>
+                            <a class="dropdown-item" href="youtube.html">YouTubeビデオ</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">本サイトについて</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <p>本サイトは現在構築中です。</p>
-        <div>
-            <span class="emoji">🚀</span>
-            <span class="emoji">💫</span>
-            <span class="emoji">🔥</span>
+    </nav>
+
+    <div class="content-main">
+        <div class="stars" id="stars"></div>
+        <div class="container-fancy">
+            <h1 class="fancy-title">こんにちは世界</h1>
+            <div>
+                <span class="emoji">✨</span>
+                <span class="emoji">🎉</span>
+                <span class="emoji">🌈</span>
+            </div>
+            <p class="fancy-text">本サイトは現在構築中です。</p>
+            <div>
+                <span class="emoji">🚀</span>
+                <span class="emoji">💫</span>
+                <span class="emoji">🔥</span>
+            </div>
         </div>
     </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Katz Kawai's GitHub Pages</h5>
+                    <p>© 2025 KKLab. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-right">
+                    <a href="index.html" class="text-white mr-3">ホームに戻る</a>
+                    <a href="https://github.com/katzkawai" class="text-white">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
 
     <script>
         // 星を作成する
