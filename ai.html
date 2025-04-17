@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIアシスタント - Katz Kawai's GitHub Pages</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .navbar-brand {
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .page-header {
+            background: linear-gradient(to right, #2c3e50, #4ca1af);
+            color: white;
+            padding: 3rem 2rem;
+            margin-bottom: 2rem;
+        }
+        .content-section {
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">KKLab</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">ホーム</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="sampleDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            サンプル
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="sampleDropdown">
+                            <a class="dropdown-item" href="sample.html">派手なサンプル</a>
+                            <a class="dropdown-item" href="youtube.html">YouTubeビデオ</a>
+                            <a class="dropdown-item active" href="ai.html">AIアシスタント <span class="sr-only">(current)</span></a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="ssgDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            SSG
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="ssgDropdown">
+                            <a class="dropdown-item" href="https://elegant-melomakarona-f85b32.netlify.app/">Astroサンプル</a>
+                            <a class="dropdown-item" href="https://lively-frangipane-f8815e.netlify.app/">VitePressサンプル</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">本サイトについて</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="page-header text-center">
+        <div class="container">
+            <h1 class="display-4">AIアシスタント</h1>
+            <p class="lead">ChatGPTの主な機能とデモをご紹介します。</p>
+        </div>
+    </header>
+    <div class="container">
+        <div class="content-section">
+            <h2>主な機能</h2>
+            <ul class="list-group list-group-flush mb-4">
+                <li class="list-group-item">自然言語での質問応答</li>
+                <li class="list-group-item">文章生成（エッセイ、詩、メールなど）</li>
+                <li class="list-group-item">コード生成・デバッグ支援</li>
+                <li class="list-group-item">翻訳・多言語対応</li>
+                <li class="list-group-item">要約・情報抽出</li>
+                <li class="list-group-item">クリエイティブなアイデア出し</li>
+            </ul>
+            <h2>デモ</h2>
+            <p>以下は「プログラミングの練習方法」を尋ねた際の一例です。</p>
+            <pre class="bg-dark text-light p-3 rounded"><code>ユーザー: JavaScriptの初心者が効果的に学ぶためのステップを教えてください。
+AIアシスタント:
+1. 基本文法を学ぶ（変数、関数、制御構文）
+2. 実際のコードを書いてみる（小さなプロジェクト）
+3. デバッグとテストを行う
+4. ドキュメントやリファレンスに慣れる
+5. オンラインチャレンジやチュートリアルに参加する
+6. オープンソースプロジェクトを読む・参加する</code></pre>
+            <div class="text-center mt-4">
+                <a href="index.html" class="btn btn-outline-primary">ホームに戻る</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>Katz Kawai's GitHub Pages</h5>
+                    <p>© 2025 KKLab. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-right">
+                    <a href="index.html" class="text-white mr-3">ホームに戻る</a>
+                    <a href="https://github.com/katzkawai" class="text-white">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+</body>
+</html>
