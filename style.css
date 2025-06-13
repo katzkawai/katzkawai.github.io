@@ -1,5 +1,21 @@
 /* 共通スタイル - KKLab */
 
+/* スキップリンク（アクセシビリティ） */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
 /* ベーススタイル */
 body {
     font-family: 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
@@ -8,6 +24,23 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+}
+
+/* フォーカススタイル（キーボードナビゲーション） */
+*:focus {
+    outline: 2px solid #4ca1af;
+    outline-offset: 2px;
+}
+
+/* ボタンとリンクのフォーカス */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus,
+.btn:focus {
+    outline: 3px solid #4ca1af;
+    outline-offset: 2px;
 }
 
 /* ナビゲーション */

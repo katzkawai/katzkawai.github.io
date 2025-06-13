@@ -24,11 +24,20 @@
     <meta name="twitter:description" content="Katz Kawaiのポートフォリオサイト。Web開発、PWA、Reactなどのサンプルプロジェクトを紹介しています。">
     <meta name="twitter:image" content="https://katzkawai.github.io/imgs/papichan.png">
 
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://code.jquery.com">
+    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     
     <!-- Common CSS -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#2c3e50">
+    <link rel="apple-touch-icon" href="/imgs/icon-192.png">
     
     <!-- Custom CSS -->
     <style>
@@ -37,7 +46,8 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" role="navigation" aria-label="メインナビゲーション">
         <div class="container">
             <a class="navbar-brand" href="#">KKLab</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
@@ -115,13 +125,13 @@
         </div>
     </div>
 
-    <div class="container my-5">
+    <div class="container my-5" id="main-content">
         <div class="row">
             <div class="col-md-6 mb-4">
                 <div class="profile-section">
                     <h2 class="mb-4">プロフィール</h2>
                     <figure class="text-center">
-                        <img class="figure-img img-fluid mx-auto" src="imgs/papichan.png" alt="パピちゃん">
+                        <img class="figure-img img-fluid mx-auto" src="imgs/papichan.png" alt="パピちゃんが喜んでいる様子のイラスト" loading="lazy">
                         <figcaption class="figure-caption">パピちゃん喜ぶの巻</figcaption>
                     </figure>
                 </div>
@@ -167,7 +177,7 @@
             </div>
         </div>
 
-        <h2 class="mb-4 mt-5">プロジェクト</h2>
+        <h2 class="mb-4 mt-5" id="projects-heading">プロジェクト</h2>
         <div class="row">
             <div class="col-md-4">
                 <div class="card project-card">
@@ -199,7 +209,7 @@
         </div>
     </div>
 
-    <footer>
+    <footer role="contentinfo">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
