@@ -6,67 +6,33 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Katz Kawaiのポートフォリオサイト">
+    <meta name="description" content="Katz Kawaiのポートフォリオサイト。Web開発、PWA、Reactなどのサンプルプロジェクトを紹介しています。">
+    <meta name="keywords" content="Katz Kawai, ポートフォリオ, Web開発, PWA, React, 名古屋">
+    <meta name="author" content="Katz Kawai">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Katz Kawai's GitHub Pages">
+    <meta property="og:description" content="Katz Kawaiのポートフォリオサイト。Web開発、PWA、Reactなどのサンプルプロジェクトを紹介しています。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://katzkawai.github.io/">
+    <meta property="og:image" content="https://katzkawai.github.io/imgs/papichan.png">
+    <meta property="og:site_name" content="KKLab">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Katz Kawai's GitHub Pages">
+    <meta name="twitter:description" content="Katz Kawaiのポートフォリオサイト。Web開発、PWA、Reactなどのサンプルプロジェクトを紹介しています。">
+    <meta name="twitter:image" content="https://katzkawai.github.io/imgs/papichan.png">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="style.css">
+    
     <!-- Custom CSS -->
     <style>
-        body {
-            font-family: 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
-            background-color: #f8f9fa;
-        }
-        
-        .navbar-brand {
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-        
-        .jumbotron {
-            background: linear-gradient(to right, #2c3e50, #4ca1af);
-            color: white;
-            padding: 3rem 2rem;
-            border-radius: 0;
-            margin-bottom: 2rem;
-        }
-        
-        .project-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            margin-bottom: 20px;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        }
-        
-        .profile-section {
-            background-color: white;
-            border-radius: 8px;
-            padding: 20px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
-        }
-        
-        footer {
-            background-color: #343a40;
-            color: white;
-            padding: 20px 0;
-            margin-top: 50px;
-        }
-        
-        .figure-img {
-            max-width: 400px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        
-        .figure-caption {
-            margin-top: 10px;
-            font-size: 1rem;
-            color: #6c757d;
-        }
+        /* ページ固有のスタイルはここに追加 */
     </style>
 </head>
 
@@ -131,6 +97,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">本サイトについて</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">お問い合わせ</a>
                     </li>
                 </ul>
             </div>
@@ -205,7 +174,7 @@
                     <div class="card-body">
                         <h5 class="card-title">ウェブサイト作成</h5>
                         <p class="card-text">様々な技術を使ったサイト作成のサンプル集。</p>
-                        <a href="#" class="btn btn-outline-primary">詳細を見る</a>
+                        <a href="projects/website-detail.html" class="btn btn-outline-primary">詳細を見る</a>
                     </div>
                 </div>
             </div>
@@ -214,7 +183,7 @@
                     <div class="card-body">
                         <h5 class="card-title">PWAサンプル</h5>
                         <p class="card-text">プログレッシブウェブアプリの実装サンプル。オフライン対応とプッシュ通知。</p>
-                        <a href="https://luxurious-rambunctious-chickadee.glitch.me/" class="btn btn-outline-primary">詳細を見る</a>
+                        <a href="projects/pwa-detail.html" class="btn btn-outline-primary">詳細を見る</a>
                     </div>
                 </div>
             </div>
@@ -223,7 +192,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Reactサンプル</h5>
                         <p class="card-text">Reactを使った時計アプリのサンプル実装。</p>
-                        <a href="https://clock-sample-katzkawai.replit.app/" class="btn btn-outline-primary">詳細を見る</a>
+                        <a href="projects/react-detail.html" class="btn btn-outline-primary">詳細を見る</a>
                     </div>
                 </div>
             </div>
@@ -239,6 +208,7 @@
                 </div>
                 <div class="col-md-6 text-md-right">
                     <a href="about.html" class="text-white mr-3">本サイトについて</a>
+                    <a href="contact.html" class="text-white mr-3">お問い合わせ</a>
                     <a href="https://github.com/katzkawai" class="text-white">GitHub</a>
                 </div>
             </div>
@@ -250,6 +220,9 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
 </body>
 
 </html>

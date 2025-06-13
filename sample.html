@@ -4,22 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CSS3アニメーションを使った派手なサンプルページ。グラデーション背景、バウンスアニメーション、星のエフェクトなどを実装。">
+    <meta name="keywords" content="CSS3, アニメーション, グラデーション, Web開発, サンプル">
+    <meta name="author" content="Katz Kawai">
     <title>派手なサンプルページ - Katz Kawai's GitHub Pages</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    
+    <!-- Common CSS -->
+    <link rel="stylesheet" href="style.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
         
-        body {
-            font-family: 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .navbar-brand {
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
+        /* ページ固有のスタイル */
         
         .content-main {
             background: linear-gradient(45deg, #ff00cc, #3333ff, #00ffcc, #ffcc00);
@@ -113,10 +110,48 @@
             to {transform: rotate(360deg);}
         }
         
-        footer {
-            background-color: #343a40;
-            color: white;
-            padding: 20px 0;
+        
+        /* モバイル対応 */
+        @media (max-width: 768px) {
+            h1.fancy-title {
+                font-size: 2.5rem;
+            }
+            
+            p.fancy-text {
+                font-size: 1.2rem;
+            }
+            
+            .emoji {
+                font-size: 2rem;
+            }
+            
+            .container-fancy {
+                padding: 1.5rem;
+                transform: none;
+            }
+            
+            .container-fancy:hover {
+                transform: scale(1.02);
+            }
+            
+            /* パフォーマンス改善のため星を減らす */
+            .star:nth-child(n+50) {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            h1.fancy-title {
+                font-size: 2rem;
+            }
+            
+            p.fancy-text {
+                font-size: 1rem;
+            }
+            
+            .emoji {
+                font-size: 1.5rem;
+            }
         }
     </style>
 </head>
@@ -225,21 +260,9 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
-
-    <script>
-        // 星を作成する
-        const starsContainer = document.getElementById('stars');
-        for (let i = 0; i < 100; i++) {
-            const star = document.createElement('div');
-            star.classList.add('star');
-            star.style.width = `${Math.random() * 5}px`;
-            star.style.height = star.style.width;
-            star.style.left = `${Math.random() * 100}%`;
-            star.style.top = `${Math.random() * 100}%`;
-            star.style.animationDuration = `${Math.random() * 2 + 0.5}s`;
-            star.style.animationDelay = `${Math.random() * 2}s`;
-            starsContainer.appendChild(star);
-        }
-    </script>
+    
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/fancy-effects.js"></script>
 </body>
 </html>
