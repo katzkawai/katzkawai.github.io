@@ -6,13 +6,16 @@
 document.addEventListener('DOMContentLoaded', function() {
     // スムーススクロール機能
     initSmoothScroll();
-    
+
     // トップへ戻るボタンの表示制御
     initBackToTop();
-    
+
     // アニメーション効果
     initScrollAnimations();
-    
+
+    // プロジェクトフィルター機能
+    initProjectFilter();
+
     // Service Workerの登録
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
@@ -177,4 +180,61 @@ if (document.getElementById('contactForm')) {
 function validateEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
+}
+
+/**
+ * プロジェクトフィルター機能
+ */
+function initProjectFilter() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectItems = document.querySelectorAll('.project-item');
+
+    if (filterButtons.length === 0 || projectItems.length === 0) {
+        return;
+    }
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const filterValue = this.getAttribute('data-filter');
+
+            // すべてのボタンからactiveクラスを削除
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+
+            // クリックされたボタンにactiveクラスを追加
+            this.classList.add('active');
+
+            // プロジェクトアイテムのフィルタリング
+            projectItems.forEach(item => {
+                if (filterValue === 'all') {
+                    item.style.display = 'block';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'scale(1)';
+                    }, 10);
+                } else {
+                    const category = item.getAttribute('data-category');
+                    if (category === filterValue) {
+                        item.style.display = 'block';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'scale(1)';
+                        }, 10);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'scale(0.8)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 300);
+                    }
+                }
+            });
+        });
+    });
+
+    // 初期スタイル設定
+    projectItems.forEach(item => {
+        item.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+        item.style.opacity = '1';
+        item.style.transform = 'scale(1)';
+    });
 }

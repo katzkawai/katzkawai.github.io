@@ -119,82 +119,235 @@
 
     <div class="container my-5" id="main-content">
         <div class="row">
-            <div class="col-md-6 mb-4">
+            <div class="col-md-12 mb-4 text-center">
                 <div class="profile-section">
                     <h2 class="mb-4">プロフィール</h2>
                     <figure class="text-center">
-                        <img class="figure-img img-fluid mx-auto" src="imgs/papichan.png" alt="パピちゃんが喜んでいる様子のイラスト" loading="lazy">
+                        <img class="figure-img img-fluid mx-auto" src="imgs/papichan.png" alt="パピちゃんが喜んでいる様子のイラスト" loading="lazy" style="max-width: 300px;">
                         <figcaption class="figure-caption">パピちゃん喜ぶの巻</figcaption>
                     </figure>
-                </div>
-            </div>
-            <div class="col-md-6 mb-4">
-                <div class="profile-section">
-                    <h2 class="mb-4">最近の活動</h2>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            GitHub Pagesを更新
-                            <span class="badge badge-primary badge-pill">New</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            名古屋一泊二日観光プラン
-                            <span class="badge badge-primary badge-pill">New</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            クリティカルシンキング
-                            <span class="badge badge-primary badge-pill">New</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            ロジカルシンキング
-                            <span class="badge badge-primary badge-pill">New</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            コンテナ革命
-                            <span class="badge badge-primary badge-pill">New</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            AIアシスタントページ
-                            <span class="badge badge-primary badge-pill">New</span>
-                        </li>
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            SSGドロップダウンメニュー
-                            <span class="badge badge-primary badge-pill">New</span>
-                        </li>
-                        <li class="list-group-item">シンプルなカレンダー</li>
-                        <li class="list-group-item">Reactのクロックサンプルを作成</li>
-                        <li class="list-group-item">PWAサンプルの実装</li>
-                        <li class="list-group-item">愛犬のページを作成</li>
-                    </ul>
                 </div>
             </div>
         </div>
 
         <h2 class="mb-4 mt-5" id="projects-heading">プロジェクト</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card project-card">
+
+        <!-- Filter Buttons -->
+        <div class="mb-4 text-center">
+            <button class="btn btn-outline-primary btn-sm filter-btn active" data-filter="all">すべて</button>
+            <button class="btn btn-outline-info btn-sm filter-btn" data-filter="site">サイトサンプル</button>
+            <button class="btn btn-outline-success btn-sm filter-btn" data-filter="app">アプリサンプル</button>
+            <button class="btn btn-outline-warning btn-sm filter-btn" data-filter="ssg">SSG</button>
+        </div>
+
+        <div class="row" id="project-cards">
+            <!-- サイトサンプル -->
+            <div class="col-md-4 col-sm-6 mb-4 project-item" data-category="site">
+                <div class="card project-card h-100">
                     <div class="card-body">
-                        <h5 class="card-title">ウェブサイト作成</h5>
-                        <p class="card-text">様々な技術を使ったサイト作成のサンプル集。</p>
-                        <a href="projects/website-detail.html" class="btn btn-outline-primary">詳細を見る</a>
+                        <h5 class="card-title">派手なサンプル</h5>
+                        <p class="card-text">派手なデザインのウェブサイトサンプル</p>
+                        <span class="badge badge-info mb-2">サイトサンプル</span>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <a href="sample.html" class="btn btn-outline-primary btn-block">見る</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card project-card">
+
+            <div class="col-md-4 col-sm-6 mb-4 project-item" data-category="site">
+                <div class="card project-card h-100">
                     <div class="card-body">
-                        <h5 class="card-title">PWAサンプル</h5>
-                        <p class="card-text">プログレッシブウェブアプリの実装サンプル。オフライン対応とプッシュ通知。</p>
-                        <a href="projects/pwa-detail.html" class="btn btn-outline-primary">詳細を見る</a>
+                        <h5 class="card-title">名古屋観光ガイド</h5>
+                        <p class="card-text">名古屋の観光スポットを紹介するサイト</p>
+                        <span class="badge badge-info mb-2">サイトサンプル</span>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <a href="https://magnificent-mermaid-c63c34.netlify.app/" class="btn btn-outline-primary btn-block" target="_blank" rel="noopener noreferrer">見る</a>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card project-card">
+
+            <div class="col-md-4 col-sm-6 mb-4 project-item" data-category="site">
+                <div class="card project-card h-100">
                     <div class="card-body">
-                        <h5 class="card-title">Reactサンプル</h5>
-                        <p class="card-text">Reactを使った時計アプリのサンプル実装。</p>
-                        <a href="projects/react-detail.html" class="btn btn-outline-primary">詳細を見る</a>
+                        <h5 class="card-title">YouTubeビデオ</h5>
+                        <p class="card-text">YouTube動画を埋め込んだサンプルページ</p>
+                        <span class="badge badge-info mb-2">サイトサンプル</span>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <a href="youtube.html" class="btn btn-outline-primary btn-block">見る</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 mb-4 project-item" data-category="site">
+                <div class="card project-card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">個人サイトサンプル</h5>
+                        <p class="card-text">シンプルな個人サイトのサンプル</p>
+                        <span class="badge badge-info mb-2">サイトサンプル</span>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <a href="https://singular-zabaione-60aafa.netlify.app/" class="btn btn-outline-primary btn-block" target="_blank" rel="noopener noreferrer">見る</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 mb-4 project-item" data-category="site">
+                <div class="card project-card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">個人ブログ</h5>
+                        <p class="card-text">ブログ形式のウェブサイトサンプル</p>
+                        <span class="badge badge-info mb-2">サイトサンプル</span>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <a href="https://spectacular-syrniki-3ec29e.netlify.app/" class="btn btn-outline-primary btn-block" target="_blank" rel="noopener noreferrer">見る</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 mb-4 project-item" data-category="site">
+                <div class="card project-card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">素敵なパピちゃん</h5>
+                        <p class="card-text">パピちゃんの特別なウェブサイト</p>
+                        <span class="badge badge-info mb-2">サイトサンプル</span>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <a href="https://www.compecon.nagoya/" class="btn btn-outline-primary btn-block" target="_blank" rel="noopener noreferrer">見る</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 mb-4 project-item" data-category="site">
+                <div class="card project-card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">ポートフォリオサイト</h5>
+                        <p class="card-text">プロフェッショナルなポートフォリオサイト</p>
+                        <span class="badge badge-info mb-2">サイトサンプル</span>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <a href="https://portfolio.compecon.nagoya/" class="btn btn-outline-primary btn-block" target="_blank" rel="noopener noreferrer">見る</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- アプリサンプル -->
+            <div class="col-md-4 col-sm-6 mb-4 project-item" data-category="app">
+                <div class="card project-card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Reactクロック</h5>
+                        <p class="card-text">Reactで作成したシンプルな時計アプリ</p>
+                        <span class="badge badge-success mb-2">アプリサンプル</span>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <a href="https://clock-sample-katzkawai.replit.app/" class="btn btn-outline-primary btn-block" target="_blank" rel="noopener noreferrer">見る</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 mb-4 project-item" data-category="app">
+                <div class="card project-card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">AIアシスタント</h5>
+                        <p class="card-text">AIを活用したアシスタントアプリ</p>
+                        <span class="badge badge-success mb-2">アプリサンプル</span>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <a href="ai.html" class="btn btn-outline-primary btn-block">見る</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 mb-4 project-item" data-category="app">
+                <div class="card project-card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">3D形状エクスプローラー</h5>
+                        <p class="card-text">3D形状を表示・操作できるアプリ</p>
+                        <span class="badge badge-success mb-2">アプリサンプル</span>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <a href="https://moonlit-genie-61860e.netlify.app/" class="btn btn-outline-primary btn-block" target="_blank" rel="noopener noreferrer">見る</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 mb-4 project-item" data-category="app">
+                <div class="card project-card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">備忘録</h5>
+                        <p class="card-text">メモを記録・管理できるアプリ</p>
+                        <span class="badge badge-success mb-2">アプリサンプル</span>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <a href="https://jazzy-pithivier-db419f.netlify.app/" class="btn btn-outline-primary btn-block" target="_blank" rel="noopener noreferrer">見る</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 mb-4 project-item" data-category="app">
+                <div class="card project-card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">自動献立生成アプリ</h5>
+                        <p class="card-text">AIが献立を自動で提案するアプリ</p>
+                        <span class="badge badge-success mb-2">アプリサンプル</span>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <a href="https://kondate.kklab.nagoya" class="btn btn-outline-primary btn-block" target="_blank" rel="noopener noreferrer">見る</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 mb-4 project-item" data-category="app">
+                <div class="card project-card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">地図情報アプリ</h5>
+                        <p class="card-text">地図上に情報を表示するアプリ</p>
+                        <span class="badge badge-success mb-2">アプリサンプル</span>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <a href="https://maps.ideamarkets.jp/" class="btn btn-outline-primary btn-block" target="_blank" rel="noopener noreferrer">見る</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 mb-4 project-item" data-category="app">
+                <div class="card project-card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">割り勘アプリ</h5>
+                        <p class="card-text">グループでの支払いを簡単に分割</p>
+                        <span class="badge badge-success mb-2">アプリサンプル</span>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <a href="https://wari-wari-finances.lovable.app/" class="btn btn-outline-primary btn-block" target="_blank" rel="noopener noreferrer">見る</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SSG -->
+            <div class="col-md-4 col-sm-6 mb-4 project-item" data-category="ssg">
+                <div class="card project-card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Astroサンプル</h5>
+                        <p class="card-text">Astroで構築した静的サイト</p>
+                        <span class="badge badge-warning mb-2">SSG</span>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <a href="https://elegant-melomakarona-f85b32.netlify.app/" class="btn btn-outline-primary btn-block" target="_blank" rel="noopener noreferrer">見る</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 mb-4 project-item" data-category="ssg">
+                <div class="card project-card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">VitePressサンプル</h5>
+                        <p class="card-text">VitePressで作成したドキュメントサイト</p>
+                        <span class="badge badge-warning mb-2">SSG</span>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <a href="https://lively-frangipane-f8815e.netlify.app/" class="btn btn-outline-primary btn-block" target="_blank" rel="noopener noreferrer">見る</a>
                     </div>
                 </div>
             </div>
