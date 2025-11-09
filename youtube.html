@@ -43,46 +43,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">ホーム</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="sampleDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            サイトサンプル
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="sampleDropdown">
-                            <a class="dropdown-item" href="sample.html">派手なサンプル</a>
-                            <a class="dropdown-item" href="https://magnificent-mermaid-c63c34.netlify.app/">名古屋観光ガイド</a>
-                            <a class="dropdown-item active" href="youtube.html">YouTubeビデオ <span class="sr-only">(current)</span></a>
-                            <a class="dropdown-item" href="https://singular-zabaione-60aafa.netlify.app/">個人サイトサンプル</a>
-                            <a class="dropdown-item" href="https://spectacular-syrniki-3ec29e.netlify.app/">個人ブログ</a>
-                            <a class="dropdown-item" href="https://www.asahi.com/">新しいサンプル</a>
-                            <a class="dropdown-item" href="https://www.compecon.nagoya/">素敵なパピちゃん</a>
-                            <a class="dropdown-item" href="https://portfolio.compecon.nagoya/">ポートフォリオサイト</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="appSampleDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            アプリサンプル
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="appSampleDropdown">
-                            <a class="dropdown-item" href="https://clock-sample-katzkawai.replit.app/">React</a>
-                            <a class="dropdown-item" href="ai.html">AIアシスタント</a>
-                            <a class="dropdown-item" href="https://moonlit-genie-61860e.netlify.app/">3D形状エクスプローラー</a>
-                            <a class="dropdown-item" href="https://jazzy-pithivier-db419f.netlify.app/">備忘録</a>
-                            <a class="dropdown-item" href="https://kondate.kklab.nagoya">自動献立生成アプリ</a>
-                            <a class="dropdown-item" href="https://maps.ideamarkets.jp/">地図情報アプリ</a>
-                            <a class="dropdown-item" href="https://wari-wari-finances.lovable.app/">割り勘アプリ</a>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="ssgDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            SSG
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="ssgDropdown">
-                            <a class="dropdown-item" href="https://elegant-melomakarona-f85b32.netlify.app/">Astroサンプル</a>
-                            <a class="dropdown-item" href="https://lively-frangipane-f8815e.netlify.app/">VitePressサンプル</a>
-                        </div>
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">本サイトについて</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">お問い合わせ</a>
                     </li>
                 </ul>
             </div>
@@ -96,30 +61,64 @@
         </div>
     </header>
 
-    <div class="container">
-        <div class="content-section">
-            <h2>埋め込み方法</h2>
-            <p>YouTubeビデオを埋め込む場合、レスポンシブデザインに対応させるには特別なコンテナを用意するのがおすすめです。このページではレスポンシブな埋め込み方法を紹介しています。</p>
-            
-            <div class="alert alert-info">
-                <strong>ポイント：</strong> 「video-container」クラスを設定することで、どんな画面サイズでも適切にビデオが表示されます。
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">📺 レスポンシブデザイン</h5>
+                        <p class="card-text">YouTubeビデオを埋め込む際、レスポンシブデザインに対応させることで、どんな画面サイズでも適切に表示されます。</p>
+                    </div>
+                </div>
             </div>
-            
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/hjMx8EuyZJ8" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">🎯 簡単実装</h5>
+                        <p class="card-text">「video-container」クラスを使用することで、わずか数行のコードで実装できます。</p>
+                    </div>
+                </div>
             </div>
-            
-            <h3>埋め込みコード例</h3>
-            <pre class="bg-dark text-light p-3 rounded"><code>&lt;div class="video-container"&gt;
-    &lt;iframe src="https://www.youtube.com/embed/VIDEO_ID" 
-     title="YouTube video player" 
-     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">動画デモ</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="alert alert-info">
+                            <strong>ポイント：</strong> 「video-container」クラスを設定することで、どんな画面サイズでも適切にビデオが表示されます。
+                        </div>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/hjMx8EuyZJ8" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="mb-0">埋め込みコード例</h5>
+                    </div>
+                    <div class="card-body">
+                        <pre class="bg-dark text-light p-3 rounded mb-0"><code>&lt;div class="video-container"&gt;
+    &lt;iframe src="https://www.youtube.com/embed/VIDEO_ID"
+     title="YouTube video player"
+     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
      allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;</code></pre>
-            
-            <div class="text-center mt-5">
-                <a href="index.html" class="btn btn-outline-primary">ホームに戻る</a>
+                    </div>
+                </div>
             </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="index.html" class="btn btn-outline-primary">ホームに戻る</a>
         </div>
     </div>
 
