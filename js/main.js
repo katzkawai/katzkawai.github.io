@@ -1,240 +1,162 @@
 /**
  * 共通JavaScript - KKLab
+ * Bootstrap / jQuery 非依存のバニラ実装
  */
 
-// ページ読み込み完了時の処理
-document.addEventListener('DOMContentLoaded', function() {
-    // スムーススクロール機能
-    initSmoothScroll();
-
-    // トップへ戻るボタンの表示制御
+document.addEventListener('DOMContentLoaded', function () {
     initBackToTop();
-
-    // アニメーション効果
-    initScrollAnimations();
-
-    // プロジェクトフィルター機能
-    initProjectFilter();
-
-    // Service Workerの登録
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-            navigator.serviceWorker.register('/sw.js').then(function(registration) {
-                console.log('ServiceWorker registration successful with scope: ', registration.scope);
-            }, function(err) {
-                console.log('ServiceWorker registration failed: ', err);
-            });
-        });
-    }
+    initScrollReveal();
+    initWorksFilter();
+    initContactForm();
+    registerServiceWorker();
 });
 
-/**
- * スムーススクロール機能
- */
-function initSmoothScroll() {
-    const links = document.querySelectorAll('a[href^="#"]');
-    
-    links.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
+/* ------------------------------------------------------------------
+ * 作品フィルター（index.html）
+ * ---------------------------------------------------------------- */
+function initWorksFilter() {
+    var buttons = document.querySelectorAll('.filter-btn');
+    var cards = document.querySelectorAll('.work-card');
+    if (!buttons.length || !cards.length) { return; }
+
+    buttons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            var filter = btn.getAttribute('data-filter');
+
+            buttons.forEach(function (b) {
+                var active = b === btn;
+                b.classList.toggle('active', active);
+                b.setAttribute('aria-pressed', String(active));
+            });
+
+            cards.forEach(function (card) {
+                var show = filter === 'all' || card.getAttribute('data-category') === filter;
+                card.style.display = show ? '' : 'none';
+                if (show) { card.classList.add('in'); }
+            });
         });
     });
 }
 
-/**
- * トップへ戻るボタン
- */
-function initBackToTop() {
-    // ボタンを作成
-    const backToTopBtn = document.createElement('button');
-    backToTopBtn.innerHTML = '↑';
-    backToTopBtn.className = 'back-to-top';
-    backToTopBtn.style.cssText = `
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        width: 50px;
-        height: 50px;
-        background: linear-gradient(to right, #2c3e50, #4ca1af);
-        color: white;
-        border: none;
-        border-radius: 50%;
-        font-size: 20px;
-        cursor: pointer;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        z-index: 1000;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-    `;
-    
-    document.body.appendChild(backToTopBtn);
-    
-    // スクロール時の表示制御
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
-            backToTopBtn.style.opacity = '1';
-        } else {
-            backToTopBtn.style.opacity = '0';
-        }
-    });
-    
-    // クリック時の動作
-    backToTopBtn.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
-}
-
-/**
- * スクロールアニメーション
- */
-function initScrollAnimations() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -100px 0px'
-    };
-    
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate-in');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-    
-    // アニメーション対象の要素を監視
-    const animateElements = document.querySelectorAll('.content-section, .project-card, .profile-section');
-    animateElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
-    });
-}
-
-// アニメーション用CSS
-const style = document.createElement('style');
-style.textContent = `
-    .animate-in {
-        opacity: 1 !important;
-        transform: translateY(0) !important;
-    }
-    
-    .back-to-top:hover {
-        transform: scale(1.1);
-        box-shadow: 0 4px 15px rgba(0,0,0,0.4) !important;
-    }
-`;
-document.head.appendChild(style);
-
-/**
- * フォームバリデーション（contact.html用）
- */
-if (document.getElementById('contactForm')) {
-    const form = document.getElementById('contactForm');
-    
-    form.addEventListener('submit', function(e) {
-        // カスタムバリデーション
-        const email = form.querySelector('#email').value;
-        const message = form.querySelector('#message').value;
-        
-        if (!validateEmail(email)) {
-            e.preventDefault();
-            alert('正しいメールアドレスを入力してください。');
-            return false;
-        }
-        
-        if (message.length < 10) {
-            e.preventDefault();
-            alert('お問い合わせ内容は10文字以上入力してください。');
-            return false;
-        }
-        
-        // Formspreeを使用する場合はここで送信
-        // 実際の実装では、YOUR_FORM_IDを実際のIDに置き換える必要があります
-        if (form.action.includes('YOUR_FORM_ID')) {
-            e.preventDefault();
-            alert('現在、お問い合わせフォームは準備中です。GitHub経由でお問い合わせください。');
-            return false;
-        }
-    });
-}
-
-/**
- * メールアドレスバリデーション
- */
-function validateEmail(email) {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(email);
-}
-
-/**
- * プロジェクトフィルター機能
- */
-function initProjectFilter() {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const projectItems = document.querySelectorAll('.project-item');
-
-    if (filterButtons.length === 0 || projectItems.length === 0) {
+/* ------------------------------------------------------------------
+ * ナビゲーション開閉 / ダイアログ（navbar は後から注入されるため委譲）
+ * ---------------------------------------------------------------- */
+document.addEventListener('click', function (e) {
+    // モバイルメニューのトグル
+    var toggle = e.target.closest('.nav-toggle');
+    if (toggle) {
+        var menu = document.getElementById('nav-menu');
+        var open = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!open));
+        if (menu) { menu.classList.toggle('open', !open); }
         return;
     }
 
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const filterValue = this.getAttribute('data-filter');
+    // メニュー内リンクをクリックしたら閉じる
+    if (e.target.closest('.nav-menu a')) {
+        var navToggle = document.querySelector('.nav-toggle');
+        var navMenu = document.getElementById('nav-menu');
+        if (navToggle) { navToggle.setAttribute('aria-expanded', 'false'); }
+        if (navMenu) { navMenu.classList.remove('open'); }
+    }
 
-            // すべてのボタンからactiveクラスを削除
-            filterButtons.forEach(btn => btn.classList.remove('active'));
+    // <dialog> を開く（data-open-dialog="#id"）
+    var opener = e.target.closest('[data-open-dialog]');
+    if (opener) {
+        e.preventDefault();
+        var dlg = document.querySelector(opener.getAttribute('data-open-dialog'));
+        if (dlg && typeof dlg.showModal === 'function') { dlg.showModal(); }
+        return;
+    }
 
-            // クリックされたボタンにactiveクラスを追加
-            this.classList.add('active');
+    // <dialog> を閉じる
+    if (e.target.closest('[data-close-dialog]')) {
+        var openDialog = e.target.closest('dialog');
+        if (openDialog) { openDialog.close(); }
+    }
+});
 
-            // プロジェクトアイテムのフィルタリング
-            projectItems.forEach(item => {
-                if (filterValue === 'all') {
-                    item.style.display = 'block';
-                    setTimeout(() => {
-                        item.style.opacity = '1';
-                        item.style.transform = 'scale(1)';
-                    }, 10);
-                } else {
-                    const category = item.getAttribute('data-category');
-                    if (category === filterValue) {
-                        item.style.display = 'block';
-                        setTimeout(() => {
-                            item.style.opacity = '1';
-                            item.style.transform = 'scale(1)';
-                        }, 10);
-                    } else {
-                        item.style.opacity = '0';
-                        item.style.transform = 'scale(0.8)';
-                        setTimeout(() => {
-                            item.style.display = 'none';
-                        }, 300);
-                    }
-                }
-            });
-        });
+/* ------------------------------------------------------------------
+ * トップへ戻るボタン
+ * ---------------------------------------------------------------- */
+function initBackToTop() {
+    var btn = document.createElement('button');
+    btn.className = 'back-to-top';
+    btn.setAttribute('aria-label', 'ページ上部へ戻る');
+    btn.innerHTML = '↑';
+    document.body.appendChild(btn);
+
+    window.addEventListener('scroll', function () {
+        btn.classList.toggle('show', window.pageYOffset > 300);
+    }, { passive: true });
+
+    btn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+}
 
-    // 初期スタイル設定
-    projectItems.forEach(item => {
-        item.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-        item.style.opacity = '1';
-        item.style.transform = 'scale(1)';
+/* ------------------------------------------------------------------
+ * スクロール演出（.reveal 要素をフェードイン）
+ * ---------------------------------------------------------------- */
+function initScrollReveal() {
+    var targets = document.querySelectorAll('.reveal');
+    if (!targets.length || !('IntersectionObserver' in window)) {
+        targets.forEach(function (el) { el.classList.add('in'); });
+        return;
+    }
+
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('in');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: '0px 0px -80px 0px' });
+
+    targets.forEach(function (el) { observer.observe(el); });
+}
+
+/* ------------------------------------------------------------------
+ * お問い合わせフォームの検証（contact.html）
+ * ---------------------------------------------------------------- */
+function initContactForm() {
+    var form = document.getElementById('contactForm');
+    if (!form) { return; }
+
+    form.addEventListener('submit', function (e) {
+        var email = form.querySelector('#email');
+        var message = form.querySelector('#message');
+
+        if (email && !isValidEmail(email.value)) {
+            e.preventDefault();
+            alert('正しいメールアドレスを入力してください。');
+            return;
+        }
+        if (message && message.value.trim().length < 10) {
+            e.preventDefault();
+            alert('お問い合わせ内容は10文字以上入力してください。');
+            return;
+        }
+        if (form.action.indexOf('YOUR_FORM_ID') !== -1) {
+            e.preventDefault();
+            alert('現在、お問い合わせフォームは準備中です。GitHub経由でお問い合わせください。');
+        }
+    });
+}
+
+function isValidEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+/* ------------------------------------------------------------------
+ * Service Worker
+ * ---------------------------------------------------------------- */
+function registerServiceWorker() {
+    if (!('serviceWorker' in navigator)) { return; }
+    window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/sw.js').catch(function (err) {
+            console.warn('ServiceWorker registration failed:', err);
+        });
     });
 }

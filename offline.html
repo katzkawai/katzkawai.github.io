@@ -1,63 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>オフライン - KKLab</title>
+    <title>オフライン | KKLab</title>
+    <meta name="theme-color" content="#6366f1">
     <style>
         body {
-            font-family: 'Helvetica Neue', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
+            font-family: 'Segoe UI', 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, system-ui, sans-serif;
+            background: #f6f7fb;
+            color: #1f2433;
             margin: 0;
-            padding: 0;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 100vh;
         }
-        
-        .offline-container {
+        .offline {
             text-align: center;
             padding: 2rem;
-            max-width: 600px;
+            max-width: 560px;
         }
-        
-        .offline-icon {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            color: #6c757d;
-        }
-        
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 1rem;
-        }
-        
-        p {
-            color: #6c757d;
-            line-height: 1.6;
-            margin-bottom: 2rem;
-        }
-        
+        .offline .icon { font-size: 4rem; margin-bottom: 1rem; }
+        .offline h1 { color: #1f2433; margin-bottom: .75rem; }
+        .offline p { color: #5b6478; line-height: 1.7; margin-bottom: 2rem; }
         .btn {
             display: inline-block;
-            padding: 0.75rem 1.5rem;
-            background: linear-gradient(to right, #2c3e50, #4ca1af);
-            color: white;
+            padding: 12px 26px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+            color: #fff;
+            font-weight: 700;
             text-decoration: none;
-            border-radius: 50px;
-            transition: transform 0.3s ease;
+            transition: transform .2s ease;
         }
-        
-        .btn:hover {
-            transform: translateY(-2px);
-        }
+        .btn:hover { transform: translateY(-2px); }
     </style>
 </head>
+
 <body>
-    <div class="offline-container">
-        <div class="offline-icon">📡</div>
+    <div class="offline">
+        <div class="icon" aria-hidden="true">📡</div>
         <h1>オフラインです</h1>
         <p>
             インターネット接続がありません。<br>
@@ -66,4 +50,5 @@
         <a href="/" class="btn" onclick="window.location.reload(); return false;">再読み込み</a>
     </div>
 </body>
+
 </html>

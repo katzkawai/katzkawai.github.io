@@ -2,311 +2,337 @@
 <html lang="ja">
 
 <head>
-    <title>Katz Kawai's GitHub Pages</title>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Katz Kawaiのポートフォリオサイト。Web開発、PWA、Reactなどのサンプルプロジェクトを紹介しています。">
-    <meta name="keywords" content="Katz Kawai, ポートフォリオ, Web開発, PWA, React, 名古屋">
+    <title>Katz Kawai | KKLab</title>
+    <meta name="description" content="Katz Kawai の個人サイト。Web開発・PWA・モダンフロントエンドの実験場です。">
+    <meta name="keywords" content="Katz Kawai, KKLab, Web開発, PWA, フロントエンド, 名古屋">
     <meta name="author" content="Katz Kawai">
-    
+
     <!-- Open Graph -->
-    <meta property="og:title" content="Katz Kawai's GitHub Pages">
-    <meta property="og:description" content="Katz Kawaiのポートフォリオサイト。Web開発、PWA、Reactなどのサンプルプロジェクトを紹介しています。">
+    <meta property="og:title" content="Katz Kawai | KKLab">
+    <meta property="og:description" content="Katz Kawai の個人サイト。Web開発・PWA・モダンフロントエンドの実験場です。">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://katzkawai.github.io/">
     <meta property="og:image" content="https://katzkawai.github.io/imgs/papichan.png">
     <meta property="og:site_name" content="KKLab">
-    
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Katz Kawai's GitHub Pages">
-    <meta name="twitter:description" content="Katz Kawaiのポートフォリオサイト。Web開発、PWA、Reactなどのサンプルプロジェクトを紹介しています。">
+    <meta name="twitter:title" content="Katz Kawai | KKLab">
+    <meta name="twitter:description" content="Katz Kawai の個人サイト。Web開発・PWA・モダンフロントエンドの実験場です。">
     <meta name="twitter:image" content="https://katzkawai.github.io/imgs/papichan.png">
 
-    <!-- Preconnect to external resources -->
-    <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    <link rel="preconnect" href="https://code.jquery.com">
-    
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    
-    <!-- Common CSS -->
     <link rel="stylesheet" href="style.css">
-    
-    <!-- PWA -->
     <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#2c3e50">
+    <meta name="theme-color" content="#6366f1">
     <link rel="apple-touch-icon" href="/imgs/icon-192.png">
-    
-    <!-- Custom CSS -->
-    <style>
-        /* ページ固有のスタイルはここに追加 */
-    </style>
 </head>
 
 <body>
     <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
     <div id="navbar-placeholder"></div>
 
-    <div class="jumbotron mb-0">
-        <div class="container">
-            <h1 class="display-4">ここはどこ？わたしは誰？</h1>
-            <p class="lead">愛称はパピちゃん</p>
-            <hr class="my-4 bg-white">
-            <p>Katz Kawaiのポートフォリオサイトへようこそ！</p>
-        </div>
-    </div>
-
-    <div class="container my-5" id="main-content">
-        <div class="row">
-            <div class="col-md-12 mb-4 text-center">
-                <div class="profile-section">
-                    <h2 class="mb-4">プロフィール</h2>
-                    <figure class="text-center">
-                        <img class="figure-img img-fluid mx-auto" src="imgs/papichan.png" alt="パピちゃんが喜んでいる様子のイラスト" loading="lazy" style="max-width: 300px;">
-                        <figcaption class="figure-caption">パピちゃん喜ぶの巻</figcaption>
-                    </figure>
+    <main id="main-content">
+        <!-- ヒーロー -->
+        <section class="hero">
+            <div class="container">
+                <img class="hero-avatar" src="imgs/papichan.png" alt="愛犬パピちゃんのイラスト" width="132" height="132">
+                <h1>こんにちは、Katz Kawai です</h1>
+                <p>Web 開発を楽しみながら、モダンなフロントエンドや PWA を試している個人サイトです。</p>
+                <div class="hero-actions">
+                    <a class="btn btn-ghost" href="https://github.com/katzkawai" target="_blank" rel="noopener">GitHub を見る</a>
+                    <a class="btn btn-ghost" href="contact.html">お問い合わせ</a>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <h2 class="mb-4 mt-5" id="projects-heading">プロジェクト</h2>
+        <!-- 自己紹介 -->
+        <section class="section">
+            <div class="container">
+                <div class="card reveal prose" style="max-width: 760px; margin-inline: auto;">
+                    <h2>このサイトについて</h2>
+                    <p>
+                        KKLab は、Web 制作の練習と実験を記録するための小さな個人サイトです。
+                        派手なものより、軽くて速く、きちんと動くものを目指しています。
+                    </p>
+                    <p>
+                        作ったものは少しずつ
+                        <a href="https://github.com/katzkawai" target="_blank" rel="noopener">GitHub</a>
+                        に置いています。気になることがあれば
+                        <a href="contact.html">お問い合わせ</a>からどうぞ。
+                    </p>
+                </div>
+            </div>
+        </section>
 
-        <!-- Filter Buttons -->
-        <div class="mb-4 text-center">
-            <button class="btn btn-outline-primary btn-sm filter-btn active" data-filter="all">すべて</button>
-            <button class="btn btn-outline-info btn-sm filter-btn" data-filter="site">サイトサンプル</button>
-            <button class="btn btn-outline-success btn-sm filter-btn" data-filter="app">アプリサンプル</button>
-            <button class="btn btn-outline-warning btn-sm filter-btn" data-filter="ssg">SSG</button>
-        </div>
+        <!-- 作品（GitHub Pages） -->
+        <section class="section" id="works" style="padding-top: 0;">
+            <div class="container">
+                <h2 class="section-title reveal">作品</h2>
+                <p class="section-lead reveal">GitHub Pages で公開している制作物です（33件）。</p>
+                <div class="works-filter reveal" role="group" aria-label="作品の絞り込み">
+                    <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">すべて</button>
+                    <button class="filter-btn" type="button" data-filter="LP" aria-pressed="false">LP</button>
+                    <button class="filter-btn" type="button" data-filter="サイト" aria-pressed="false">サイト</button>
+                    <button class="filter-btn" type="button" data-filter="アプリ" aria-pressed="false">アプリ</button>
+                    <button class="filter-btn" type="button" data-filter="クリエイティブ" aria-pressed="false">クリエイティブ</button>
+                    <button class="filter-btn" type="button" data-filter="サンプル" aria-pressed="false">サンプル</button>
+                    <button class="filter-btn" type="button" data-filter="ポートフォリオ" aria-pressed="false">ポートフォリオ</button>
+                    <button class="filter-btn" type="button" data-filter="スライド" aria-pressed="false">スライド</button>
+                    <button class="filter-btn" type="button" data-filter="SSG" aria-pressed="false">SSG</button>
+                </div>
+                <div class="works-grid">
+                <a class="work-card reveal" href="https://katzkawai.org/kklab-nvidia-hamanako-unagi/" data-category="LP" target="_blank" rel="noopener noreferrer">
+                    <span class="tag">LP</span>
+                    <h3>浜名湖うなぎ LP（NVIDIA）</h3>
+                    <p>静岡県浜名湖産うなぎの魅力を紹介するランディングページ。</p>
+                    <span class="go" aria-hidden="true">見る →</span>
+                </a>
+                <a class="work-card reveal" href="https://katzkawai.org/kklab-kimi-unagi-site/" data-category="サイト" target="_blank" rel="noopener noreferrer">
+                    <span class="tag">サイト</span>
+                    <h3>浜名湖うなぎ紹介サイト（Kimi）</h3>
+                    <p>浜名湖の自然・歴史、うなぎの特徴・調理法・名店・アクセスを掲載した静的サイト。</p>
+                    <span class="go" aria-hidden="true">見る →</span>
+                </a>
+                <a class="work-card reveal" href="https://katzkawai.org/kklab-flet-simple-calc/" data-category="アプリ" target="_blank" rel="noopener noreferrer">
+                    <span class="tag">アプリ</span>
+                    <h3>シンプル電卓（Flet）</h3>
+                    <p>Python 製フレームワーク Flet で作ったシンプルな電卓アプリ。</p>
+                    <span class="go" aria-hidden="true">見る →</span>
+                </a>
+                <a class="work-card reveal" href="https://katzkawai.org/kklab-hamanako-unagi-qwen37plus/" data-category="LP" target="_blank" rel="noopener noreferrer">
+                    <span class="tag">LP</span>
+                    <h3>浜名湖うなぎ LP（Qwen3）</h3>
+                    <p>浜名湖うなぎを紹介するランディングページ。</p>
+                    <span class="go" aria-hidden="true">見る →</span>
+                </a>
+                <a class="work-card reveal" href="https://katzkawai.org/kklab-hy3-samples/" data-category="サイト" target="_blank" rel="noopener noreferrer">
+                    <span class="tag">サイト</span>
+                    <h3>浜名湖うなぎ紹介サイト（HY3）</h3>
+                    <p>浜名湖うなぎを紹介する静的サイト。</p>
+                    <span class="go" aria-hidden="true">見る →</span>
+                </a>
+                <a class="work-card reveal" href="https://katzkawai.org/kklab-opencode-unagi-site/" data-category="LP" target="_blank" rel="noopener noreferrer">
+                    <span class="tag">LP</span>
+                    <h3>浜名湖うなぎ 和モダン LP（OpenCode）</h3>
+                    <p>和モダンのシングルページ・コンセプトサイト（HTML/CSS/JS, ゼロ依存）。</p>
+                    <span class="go" aria-hidden="true">見る →</span>
+                </a>
+                <a class="work-card reveal" href="https://katzkawai.org/kklab-composer-unagi-site/" data-category="サイト" target="_blank" rel="noopener noreferrer">
+                    <span class="tag">サイト</span>
+                    <h3>浜名湖うなぎ文化サイト（Composer）</h3>
+                    <p>静岡・浜名湖のうなぎ文化を紹介する静的 Web サイト。</p>
+                    <span class="go" aria-hidden="true">見る →</span>
+                </a>
+                <a class="work-card reveal" href="https://katzkawai.org/kklab-kiro-minimax-site/" data-category="サイト" target="_blank" rel="noopener noreferrer">
+                    <span class="tag">サイト</span>
+                    <h3>たい焼き店「浪花屋」紹介サイト</h3>
+                    <p>大阪・天満橋のたい焼き店「浪花屋」の静的紹介サイト。</p>
+                    <span class="go" aria-hidden="true">見る →</span>
+                </a>
+                <a class="work-card reveal" href="https://katzkawai.org/kklab-minimax-unagi-site/" data-category="サイト" target="_blank" rel="noopener noreferrer">
+                    <span class="tag">サイト</span>
+                    <h3>浜名湖うなぎ 和モダンサイト（MiniMax）</h3>
+                    <p>浜名湖うなぎを紹介する和モダンデザインの静的サイト。</p>
+                    <span class="go" aria-hidden="true">見る →</span>
+                </a>
+                <a class="work-card reveal" href="https://katzkawai.org/kklab-deepseek-v4-site/" data-category="LP" target="_blank" rel="noopener noreferrer">
+                    <span class="tag">LP</span>
+                    <h3>浜名湖うなぎ LP（DeepSeek V4）</h3>
+                    <p>静岡・浜名湖うなぎの魅力を紹介するランディングページ。</p>
+                    <span class="go" aria-hidden="true">見る →</span>
+                </a>
+                <a class="work-card reveal" href="https://katzkawai.org/kklab-taiyaki-deepseekv4-flash/" data-category="LP" target="_blank" rel="noopener noreferrer">
+                    <span class="tag">LP</span>
+                    <h3>名古屋たい焼き 金鯱堂 LP</h3>
+                    <p>大須の架空たい焼き店「金鯱堂」のランディングページ。</p>
+                    <span class="go" aria-hidden="true">見る →</span>
+                </a>
+                <a class="work-card reveal" href="https://katzkawai.org/kklab-kiro-unagi-site/" data-category="サイト" target="_blank" rel="noopener noreferrer">
+                    <span class="tag">サイト</span>
+                    <h3>浜名湖うなぎ観光サイト（Kiro）</h3>
+                    <p>観光客向けに浜名湖うなぎの魅力を伝える静的紹介サイト（HTML/CSS/JS）。</p>
+                    <span class="go" aria-hidden="true">見る →</span>
+                </a>
+                <a class="work-card reveal" href="https://katzkawai.org/kklab-flet-calc/" data-category="アプリ" target="_blank" rel="noopener noreferrer">
+                    <span class="tag">アプリ</span>
+                    <h3>電卓アプリ（Flet）</h3>
+                    <p>Python 製フレームワーク Flet で作った電卓アプリ。</p>
+                    <span class="go" aria-hidden="true">見る →</span>
+                </a>
+                <a class="work-card reveal" href="https://katzkawai.org/kklab-flet-todo/" data-category="アプリ" target="_blank" rel="noopener noreferrer">
+                    <span class="tag">アプリ</span>
+                    <h3>TODO アプリ（Flet）</h3>
+                    <p>Python 製フレームワーク Flet で作った TODO 管理アプリ。</p>
+                    <span class="go" aria-hidden="true">見る →</span>
+                </a>
+                <a class="work-card reveal" href="https://katzkawai.org/kklab-flet-animation/" data-category="クリエイティブ" target="_blank" rel="noopener noreferrer">
+                    <span class="tag">クリエイティブ</span>
+                    <h3>KKLab ロゴアニメーション（Flet）</h3>
+                    <p>ピクセルアート文字が散らばって再集合する Flet 製ロゴアニメーション。</p>
+                    <span class="go" aria-hidden="true">見る →</span>
+                </a>
+                <a class="work-card reveal" href="https://katzkawai.org/kklab-web-page-samples/" data-category="サンプル" target="_blank" rel="noopener noreferrer">
+                    <span class="tag">サンプル</span>
+                    <h3>Web ページサンプル集</h3>
+                    <p>さまざまな Web ページのサンプル集。</p>
+                    <span class="go" aria-hidden="true">見る →</span>
+                </a>
+                <a class="work-card reveal" href="https://katzkawai.org/kklab-ml5js-examples/" data-category="クリエイティブ" target="_blank" rel="noopener noreferrer">
+                    <span class="tag">クリエイティブ</span>
+                    <h3>ml5.js サンプル集（19 本）</h3>
+                    <p>ml5.js v1.3.1 のサンプル集（19 個）のライブデモ。</p>
+                    <span class="go" aria-hidden="true">見る →</span>
+                </a>
+                <a class="work-card reveal" href="https://katzkawai.org/kklab-p5js-tutorials/" data-category="クリエイティブ" target="_blank" rel="noopener noreferrer">
+                    <span class="tag">クリエイティブ</span>
+                    <h3>p5.js チュートリアル・ゲーム集</h3>
+                    <p>書籍『p5.js 包括的チュートリアル』（河合勝彦）のサンプルゲーム集。</p>
+                    <span class="go" aria-hidden="true">見る →</span>
+                </a>
+                <a class="work-card reveal" href="https://katzkawai.org/my-portfolio-samples02/" data-category="ポートフォリオ" target="_blank" rel="noopener noreferrer">
+                    <span class="tag">ポートフォリオ</span>
+                    <h3>ポートフォリオサンプル 02</h3>
+                    <p>HTML/CSS/JS と GitHub Pages による静的ポートフォリオサイト。</p>
+                    <span class="go" aria-hidden="true">見る →</span>
+                </a>
+                <a class="work-card reveal" href="https://katzkawai.org/my-portfolio-samples01/" data-category="ポートフォリオ" target="_blank" rel="noopener noreferrer">
+                    <span class="tag">ポートフォリオ</span>
+                    <h3>ポートフォリオサンプル 01（Dark Glass）</h3>
+                    <p>ヒーロー・作品・スキル・連絡先を備えたダークグラス調の 1 ページ。</p>
+                    <span class="go" aria-hidden="true">見る →</span>
+                </a>
+                <a class="work-card reveal" href="https://katzkawai.org/doggy-tasks/" data-category="アプリ" target="_blank" rel="noopener noreferrer">
+                    <span class="tag">アプリ</span>
+                    <h3>ワンコお世話 TODO アプリ</h3>
+                    <p>ワンコの世話に関する TODO アプリ。</p>
+                    <span class="go" aria-hidden="true">見る →</span>
+                </a>
+                <a class="work-card reveal" href="https://katzkawai.org/frenchie-tasks/" data-category="アプリ" target="_blank" rel="noopener noreferrer">
+                    <span class="tag">アプリ</span>
+                    <h3>フレンチブルドッグ TODO アプリ</h3>
+                    <p>フレンチ・ブルドッグをモチーフにしたかわいい TODO アプリ。</p>
+                    <span class="go" aria-hidden="true">見る →</span>
+                </a>
+                <a class="work-card reveal" href="https://katzkawai.org/Claud_Slides/" data-category="スライド" target="_blank" rel="noopener noreferrer">
+                    <span class="tag">スライド</span>
+                    <h3>名古屋観光スライド（Reveal.js）</h3>
+                    <p>名古屋城・熱田神宮・なごやめしなどを紹介する Reveal.js スライド。</p>
+                    <span class="go" aria-hidden="true">見る →</span>
+                </a>
+                <a class="work-card reveal" href="https://katzkawai.org/claude-web-samples/" data-category="サンプル" target="_blank" rel="noopener noreferrer">
+                    <span class="tag">サンプル</span>
+                    <h3>Web サンプル集（Claude）</h3>
+                    <p>Claude で作成した Web ページのサンプル集。</p>
+                    <span class="go" aria-hidden="true">見る →</span>
+                </a>
+                <a class="work-card reveal" href="https://katzkawai.org/HamanakoUnagi/" data-category="サイト" target="_blank" rel="noopener noreferrer">
+                    <span class="tag">サイト</span>
+                    <h3>浜名湖ウナギ公式サイト</h3>
+                    <p>🍱 静岡県浜名湖の伝統的なウナギ養殖を紹介するレスポンシブ対応サイト。</p>
+                    <span class="go" aria-hidden="true">見る →</span>
+                </a>
+                <a class="work-card reveal" href="https://katzkawai.org/Codex-samples/" data-category="サンプル" target="_blank" rel="noopener noreferrer">
+                    <span class="tag">サンプル</span>
+                    <h3>Web サンプル集（Codex）</h3>
+                    <p>Codex で作成した Web ページのサンプル集。</p>
+                    <span class="go" aria-hidden="true">見る →</span>
+                </a>
+                <a class="work-card reveal" href="https://katzkawai.org/geojson_nagoya/" data-category="アプリ" target="_blank" rel="noopener noreferrer">
+                    <span class="tag">アプリ</span>
+                    <h3>名古屋市 区割り地図</h3>
+                    <p>GeoJSON を用いた名古屋市の区割り地図。</p>
+                    <span class="go" aria-hidden="true">見る →</span>
+                </a>
+                <a class="work-card reveal" href="https://katzkawai.org/Carousel/" data-category="クリエイティブ" target="_blank" rel="noopener noreferrer">
+                    <span class="tag">クリエイティブ</span>
+                    <h3>画像カルーセル</h3>
+                    <p>JavaScript による画像カルーセルのサンプル。</p>
+                    <span class="go" aria-hidden="true">見る →</span>
+                </a>
+                <a class="work-card reveal" href="https://katzkawai.org/grok_portofolio/" data-category="ポートフォリオ" target="_blank" rel="noopener noreferrer">
+                    <span class="tag">ポートフォリオ</span>
+                    <h3>ポートフォリオサンプル（Grok）</h3>
+                    <p>Grok で作成したポートフォリオサイトのサンプル。</p>
+                    <span class="go" aria-hidden="true">見る →</span>
+                </a>
+                <a class="work-card reveal" href="https://katzkawai.org/NagoyaSlideClaude/" data-category="スライド" target="_blank" rel="noopener noreferrer">
+                    <span class="tag">スライド</span>
+                    <h3>名古屋スライド（Claude）</h3>
+                    <p>名古屋を紹介するスライドプレゼンテーション。</p>
+                    <span class="go" aria-hidden="true">見る →</span>
+                </a>
+                <a class="work-card reveal" href="https://katzkawai.org/MyJekyll/" data-category="SSG" target="_blank" rel="noopener noreferrer">
+                    <span class="tag">SSG</span>
+                    <h3>Jekyll サンプルサイト</h3>
+                    <p>静的サイトジェネレーター Jekyll で構築したサイト。</p>
+                    <span class="go" aria-hidden="true">見る →</span>
+                </a>
+                <a class="work-card reveal" href="https://katzkawai.org/MyMkDocs/" data-category="SSG" target="_blank" rel="noopener noreferrer">
+                    <span class="tag">SSG</span>
+                    <h3>MkDocs ドキュメント</h3>
+                    <p>MkDocs で構築したドキュメントサイト。</p>
+                    <span class="go" aria-hidden="true">見る →</span>
+                </a>
+                <a class="work-card reveal" href="https://katzkawai.org/MyHugo/" data-category="SSG" target="_blank" rel="noopener noreferrer">
+                    <span class="tag">SSG</span>
+                    <h3>Hugo サンプルサイト</h3>
+                    <p>静的サイトジェネレーター Hugo で構築したサイト。</p>
+                    <span class="go" aria-hidden="true">見る →</span>
+                </a>
+                </div>
+            </div>
+        </section>
 
-        <div class="row" id="project-cards">
-            <!-- サイトサンプル -->
-            <div class="col-md-4 col-sm-6 mb-4 project-item" data-category="site">
-                <div class="card project-card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">派手なサンプル</h5>
-                        <p class="card-text">派手なデザインのウェブサイトサンプル</p>
-                        <span class="badge badge-info mb-2">サイトサンプル</span>
+        <!-- 取り組んでいること -->
+        <section class="section" style="padding-top: 0;">
+            <div class="container">
+                <h2 class="section-title reveal">取り組んでいること</h2>
+                <p class="section-lead reveal">技術そのものを楽しむのが好きです。</p>
+                <div class="grid">
+                    <div class="feature reveal">
+                        <div class="icon" aria-hidden="true">🧩</div>
+                        <h3>モダンフロントエンド</h3>
+                        <p>HTML / CSS / JavaScript の素の力で、軽量で読みやすい UI を作ります。</p>
                     </div>
-                    <div class="card-footer bg-transparent">
-                        <a href="sample.html" class="btn btn-outline-primary btn-block">見る</a>
+                    <div class="feature reveal">
+                        <div class="icon" aria-hidden="true">📱</div>
+                        <h3>PWA</h3>
+                        <p>Service Worker とマニフェストで、オフラインでも動くアプリ的な体験を。</p>
+                    </div>
+                    <div class="feature reveal">
+                        <div class="icon" aria-hidden="true">⚡</div>
+                        <h3>パフォーマンス</h3>
+                        <p>遅延読み込みや最小限の依存で、速く軽いサイトを意識しています。</p>
+                    </div>
+                    <div class="feature reveal">
+                        <div class="icon" aria-hidden="true">♿</div>
+                        <h3>アクセシビリティ</h3>
+                        <p>セマンティック HTML とキーボード操作に配慮した作りを心がけています。</p>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="col-md-4 col-sm-6 mb-4 project-item" data-category="site">
-                <div class="card project-card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">名古屋観光ガイド</h5>
-                        <p class="card-text">名古屋の観光スポットを紹介するサイト</p>
-                        <span class="badge badge-info mb-2">サイトサンプル</span>
-                    </div>
-                    <div class="card-footer bg-transparent">
-                        <a href="https://magnificent-mermaid-c63c34.netlify.app/" class="btn btn-outline-primary btn-block" target="_blank" rel="noopener noreferrer">見る</a>
-                    </div>
+        <!-- スキルタグ -->
+        <section class="section" style="padding-top: 0;">
+            <div class="container">
+                <h2 class="section-title reveal">よく使う技術</h2>
+                <div class="tags reveal" style="margin-top: 24px;">
+                    <span class="tag">HTML5</span>
+                    <span class="tag">CSS3</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">PWA</span>
+                    <span class="tag">React</span>
+                    <span class="tag">GitHub Pages</span>
+                    <span class="tag">静的サイト</span>
                 </div>
             </div>
-
-            <div class="col-md-4 col-sm-6 mb-4 project-item" data-category="site">
-                <div class="card project-card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">YouTubeビデオ</h5>
-                        <p class="card-text">YouTube動画を埋め込んだサンプルページ</p>
-                        <span class="badge badge-info mb-2">サイトサンプル</span>
-                    </div>
-                    <div class="card-footer bg-transparent">
-                        <a href="youtube.html" class="btn btn-outline-primary btn-block">見る</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6 mb-4 project-item" data-category="site">
-                <div class="card project-card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">個人サイトサンプル</h5>
-                        <p class="card-text">シンプルな個人サイトのサンプル</p>
-                        <span class="badge badge-info mb-2">サイトサンプル</span>
-                    </div>
-                    <div class="card-footer bg-transparent">
-                        <a href="https://singular-zabaione-60aafa.netlify.app/" class="btn btn-outline-primary btn-block" target="_blank" rel="noopener noreferrer">見る</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6 mb-4 project-item" data-category="site">
-                <div class="card project-card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">個人ブログ</h5>
-                        <p class="card-text">ブログ形式のウェブサイトサンプル</p>
-                        <span class="badge badge-info mb-2">サイトサンプル</span>
-                    </div>
-                    <div class="card-footer bg-transparent">
-                        <a href="https://spectacular-syrniki-3ec29e.netlify.app/" class="btn btn-outline-primary btn-block" target="_blank" rel="noopener noreferrer">見る</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6 mb-4 project-item" data-category="site">
-                <div class="card project-card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">素敵なパピちゃん</h5>
-                        <p class="card-text">パピちゃんの特別なウェブサイト</p>
-                        <span class="badge badge-info mb-2">サイトサンプル</span>
-                    </div>
-                    <div class="card-footer bg-transparent">
-                        <a href="https://www.compecon.nagoya/" class="btn btn-outline-primary btn-block" target="_blank" rel="noopener noreferrer">見る</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6 mb-4 project-item" data-category="site">
-                <div class="card project-card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">ポートフォリオサイト</h5>
-                        <p class="card-text">プロフェッショナルなポートフォリオサイト</p>
-                        <span class="badge badge-info mb-2">サイトサンプル</span>
-                    </div>
-                    <div class="card-footer bg-transparent">
-                        <a href="https://portfolio.compecon.nagoya/" class="btn btn-outline-primary btn-block" target="_blank" rel="noopener noreferrer">見る</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- アプリサンプル -->
-            <div class="col-md-4 col-sm-6 mb-4 project-item" data-category="app">
-                <div class="card project-card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Reactクロック</h5>
-                        <p class="card-text">Reactで作成したシンプルな時計アプリ</p>
-                        <span class="badge badge-success mb-2">アプリサンプル</span>
-                    </div>
-                    <div class="card-footer bg-transparent">
-                        <a href="https://clock-sample-katzkawai.replit.app/" class="btn btn-outline-primary btn-block" target="_blank" rel="noopener noreferrer">見る</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6 mb-4 project-item" data-category="app">
-                <div class="card project-card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">AIアシスタント</h5>
-                        <p class="card-text">AIを活用したアシスタントアプリ</p>
-                        <span class="badge badge-success mb-2">アプリサンプル</span>
-                    </div>
-                    <div class="card-footer bg-transparent">
-                        <a href="ai.html" class="btn btn-outline-primary btn-block">見る</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6 mb-4 project-item" data-category="app">
-                <div class="card project-card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">3D形状エクスプローラー</h5>
-                        <p class="card-text">3D形状を表示・操作できるアプリ</p>
-                        <span class="badge badge-success mb-2">アプリサンプル</span>
-                    </div>
-                    <div class="card-footer bg-transparent">
-                        <a href="https://moonlit-genie-61860e.netlify.app/" class="btn btn-outline-primary btn-block" target="_blank" rel="noopener noreferrer">見る</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6 mb-4 project-item" data-category="app">
-                <div class="card project-card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">備忘録</h5>
-                        <p class="card-text">メモを記録・管理できるアプリ</p>
-                        <span class="badge badge-success mb-2">アプリサンプル</span>
-                    </div>
-                    <div class="card-footer bg-transparent">
-                        <a href="https://jazzy-pithivier-db419f.netlify.app/" class="btn btn-outline-primary btn-block" target="_blank" rel="noopener noreferrer">見る</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6 mb-4 project-item" data-category="app">
-                <div class="card project-card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">自動献立生成アプリ</h5>
-                        <p class="card-text">AIが献立を自動で提案するアプリ</p>
-                        <span class="badge badge-success mb-2">アプリサンプル</span>
-                    </div>
-                    <div class="card-footer bg-transparent">
-                        <a href="https://kondate.kklab.nagoya" class="btn btn-outline-primary btn-block" target="_blank" rel="noopener noreferrer">見る</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6 mb-4 project-item" data-category="app">
-                <div class="card project-card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">地図情報アプリ</h5>
-                        <p class="card-text">地図上に情報を表示するアプリ</p>
-                        <span class="badge badge-success mb-2">アプリサンプル</span>
-                    </div>
-                    <div class="card-footer bg-transparent">
-                        <a href="https://maps.ideamarkets.jp/" class="btn btn-outline-primary btn-block" target="_blank" rel="noopener noreferrer">見る</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6 mb-4 project-item" data-category="app">
-                <div class="card project-card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">割り勘アプリ</h5>
-                        <p class="card-text">グループでの支払いを簡単に分割</p>
-                        <span class="badge badge-success mb-2">アプリサンプル</span>
-                    </div>
-                    <div class="card-footer bg-transparent">
-                        <a href="https://wari-wari-finances.lovable.app/" class="btn btn-outline-primary btn-block" target="_blank" rel="noopener noreferrer">見る</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SSG -->
-            <div class="col-md-4 col-sm-6 mb-4 project-item" data-category="ssg">
-                <div class="card project-card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Astroサンプル</h5>
-                        <p class="card-text">Astroで構築した静的サイト</p>
-                        <span class="badge badge-warning mb-2">SSG</span>
-                    </div>
-                    <div class="card-footer bg-transparent">
-                        <a href="https://elegant-melomakarona-f85b32.netlify.app/" class="btn btn-outline-primary btn-block" target="_blank" rel="noopener noreferrer">見る</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-4 col-sm-6 mb-4 project-item" data-category="ssg">
-                <div class="card project-card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">VitePressサンプル</h5>
-                        <p class="card-text">VitePressで作成したドキュメントサイト</p>
-                        <span class="badge badge-warning mb-2">SSG</span>
-                    </div>
-                    <div class="card-footer bg-transparent">
-                        <a href="https://lively-frangipane-f8815e.netlify.app/" class="btn btn-outline-primary btn-block" target="_blank" rel="noopener noreferrer">見る</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+        </section>
+    </main>
 
     <div id="footer-placeholder"></div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
-    
-    <!-- Components Loader -->
     <script src="js/components.js"></script>
-    
-    <!-- Custom JavaScript -->
     <script src="js/main.js"></script>
 </body>
 

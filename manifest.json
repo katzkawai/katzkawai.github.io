@@ -1,11 +1,11 @@
 {
   "name": "Katz Kawai's GitHub Pages",
   "short_name": "KKLab",
-  "description": "Katz Kawaiのポートフォリオサイト。Web開発、PWA、Reactなどのサンプルプロジェクトを紹介しています。",
+  "description": "Katz Kawai の個人サイト。Web開発・PWA・モダンフロントエンドの実験場です。",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#f8f9fa",
-  "theme_color": "#2c3e50",
+  "background_color": "#f6f7fb",
+  "theme_color": "#6366f1",
   "orientation": "portrait-primary",
   "icons": [
     {
@@ -27,10 +27,10 @@
   "scope": "/",
   "shortcuts": [
     {
-      "name": "プロジェクト一覧",
-      "short_name": "プロジェクト",
-      "description": "作成したプロジェクトを見る",
-      "url": "/#projects-heading",
+      "name": "本サイトについて",
+      "short_name": "About",
+      "description": "サイトと作者について",
+      "url": "/about.html",
       "icons": [{ "src": "/imgs/icon-192.png", "sizes": "192x192" }]
     },
     {

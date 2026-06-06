@@ -40,26 +40,14 @@
      */
     function setActiveNavItem() {
         var currentPage = window.location.pathname.split('/').pop() || 'index.html';
-        var navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-        
+        var navLinks = document.querySelectorAll('.nav-menu a');
+
         navLinks.forEach(function(link) {
             var href = link.getAttribute('href');
-            var parentLi = link.parentElement;
-            
-            // Remove existing active class and sr-only span
-            parentLi.classList.remove('active');
-            var srOnly = link.querySelector('.sr-only');
-            if (srOnly) {
-                srOnly.remove();
-            }
-            
-            // Add active class to current page
             if (href === currentPage) {
-                parentLi.classList.add('active');
-                var srSpan = document.createElement('span');
-                srSpan.className = 'sr-only';
-                srSpan.textContent = '(current)';
-                link.appendChild(srSpan);
+                link.setAttribute('aria-current', 'page');
+            } else {
+                link.removeAttribute('aria-current');
             }
         });
     }
