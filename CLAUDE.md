@@ -30,7 +30,7 @@ Single stylesheet, no CSS framework. Tokens live in `:root` CSS custom propertie
 - **Scroll-in animation:** add class `reveal` to any element; it fades in when scrolled into view.
 
 ### PWA / Service Worker (sw.js)
-Cache name `kklab-cache-v2`, cache-first, falls back to `/offline.html` for navigation requests when offline. **`urlsToCache` is a hardcoded precache list** (includes the HTML pages, `style.css`, `js/*.js`, and the `includes/*.html` partials). When adding a core page/asset that must work offline, add its path there AND bump `CACHE_NAME` (e.g. `-v3`) so the old cache is purged on `activate`. `offline.html` is intentionally self-contained (inline styles) so it renders without `style.css`.
+Cache name `kklab-cache-v4`, cache-first, falls back to `/offline.html` for navigation requests when offline. **`urlsToCache` is a hardcoded precache list** (includes the HTML pages, `style.css`, `js/*.js`, and the `includes/*.html` partials). When adding a core page/asset that must work offline, add its path there AND bump `CACHE_NAME` (e.g. `-v5`) so the old cache is purged on `activate`. `offline.html` is intentionally self-contained (inline styles) so it renders without `style.css`.
 
 ## Conventions
 - **HTML5**, UTF-8, `<html lang="ja">`, 4-space indent, double quotes.

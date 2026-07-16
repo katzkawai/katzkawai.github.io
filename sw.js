@@ -3,7 +3,7 @@
  * オフライン対応とキャッシュ管理
  */
 
-const CACHE_NAME = 'kklab-cache-v3';
+const CACHE_NAME = 'kklab-cache-v4';
 const urlsToCache = [
   '/',
   '/style.css',
