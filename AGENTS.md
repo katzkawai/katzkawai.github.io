@@ -70,8 +70,8 @@ CSS フレームワークなしの単一ファイル。色・影・角丸は `:r
 
 ### PWA / Service Worker（sw.js）
 
-- `CACHE_NAME = 'kklab-cache-v4'`。cache-first + ランタイムキャッシュ（status 200 かつ type `basic` のみ保存）。ナビゲーションリクエストのオフライン時は `/offline.html` にフォールバック。
-- **`urlsToCache` はハードコードのプリキャッシュリスト**（`/`、4 HTML ページ、`style.css`、`js/*.js`、`includes/*.html`）。コアページ/アセットを追加したら**リストに追加し、`CACHE_NAME` をバンプ**する（activate 時にホワイトリスト外の旧キャッシュを削除する仕組み）。
+- `CACHE_NAME = 'kklab-cache-v5'`。**ナビゲーションリクエスト（HTML）は network-first** — 毎回ネットワークから取得してキャッシュを更新し、オフライン時はキャッシュ → `/offline.html` の順にフォールバック。そのためページ内容の変更（作品カード追加など）にキャッシュバンプは不要。その他のリソース（CSS/JS/画像/パーシャル）は cache-first + ランタイムキャッシュ（status 200 かつ type `basic` のみ保存）。
+- **`urlsToCache` はハードコードのプリキャッシュリスト**（`/`、4 HTML ページ、`style.css`、`js/*.js`、`includes/*.html`）。コアページ/アセットを追加したとき、または cache-first のアセットの変更を再訪問者に届けたいときは**リストに追加し、`CACHE_NAME` をバンプ**する（activate 時にホワイトリスト外の旧キャッシュを削除する仕組み）。
 - `offline.html` は意図的に自己完結（インラインスタイルのみ、スクリプトなし）— `style.css` 非依存なので依存を追加しない。
 
 ### contact.html のフォームはプレースホルダ

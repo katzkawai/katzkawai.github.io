@@ -3,7 +3,7 @@
  * オフライン対応とキャッシュ管理
  */
 
-const CACHE_NAME = 'kklab-cache-v4';
+const CACHE_NAME = 'kklab-cache-v5';
 const urlsToCache = [
   '/',
   '/style.css',
@@ -30,6 +30,32 @@ self.addEventListener('install', event => {
 
 // フェッチイベント
 self.addEventListener('fetch', event => {
+  // ナビゲーションリクエスト（HTML）はネットワーク優先
+  // オフライン時はキャッシュ、それもなければオフラインページを返す
+  if (event.request.mode === 'navigate') {
+    event.respondWith(
+      fetch(event.request)
+        .then(response => {
+          if (response && response.status === 200 && response.type === 'basic') {
+            const responseToCache = response.clone();
+
+            caches.open(CACHE_NAME)
+              .then(cache => {
+                cache.put(event.request, responseToCache);
+              });
+          }
+
+          return response;
+        })
+        .catch(() => {
+          return caches.match(event.request)
+            .then(response => response || caches.match('/offline.html'));
+        })
+    );
+    return;
+  }
+
+  // その他のリソースはキャッシュ優先
   event.respondWith(
     caches.match(event.request)
       .then(response => {
@@ -57,12 +83,6 @@ self.addEventListener('fetch', event => {
             return response;
           }
         );
-      })
-      .catch(() => {
-        // オフライン時の処理
-        if (event.request.destination === 'document') {
-          return caches.match('/offline.html');
-        }
       })
   );
 });
