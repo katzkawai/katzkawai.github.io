@@ -416,6 +416,7 @@ main { display: block; }
 .work-card .tag { align-self: flex-start; margin-bottom: 12px; }
 .work-card h3 { margin: 0 0 8px; font-size: 1.08rem; line-height: 1.4; }
 .work-card p { margin: 0 0 16px; color: var(--muted); font-size: .92rem; flex: 1; }
+.work-card .work-updated { margin-bottom: 6px; color: var(--muted); font-size: .8rem; }
 .work-card .go {
     display: inline-flex;
     align-items: center;
