@@ -218,6 +218,15 @@ h1, h2, h3, h4 { line-height: 1.45; }
     text-wrap: pretty;
 }
 
+.hero .hero-note {
+    margin: 14px auto 0;
+    max-width: 640px;
+    font-size: .92rem;
+    opacity: .85;
+    text-shadow: 0 2px 8px rgba(0,0,0,.12);
+    text-wrap: pretty;
+}
+
 .hero-avatar {
     width: 144px; height: 144px;
     border-radius: 50%;

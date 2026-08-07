@@ -4,12 +4,32 @@
  */
 
 document.addEventListener('DOMContentLoaded', function () {
+    initHeroGreeting();
     initBackToTop();
     initScrollReveal();
     initWorksFilter();
     initContactForm();
     registerServiceWorker();
 });
+
+/* ------------------------------------------------------------------
+ * ヒーローの挨拶（index.html）— 現地時間に合わせて切り替え
+ * ---------------------------------------------------------------- */
+function initHeroGreeting() {
+    var el = document.getElementById('hero-greeting');
+    if (!el) { return; }
+
+    var hour = new Date().getHours();
+    var greeting;
+    if (hour >= 5 && hour < 11) {
+        greeting = 'おはようございます';
+    } else if (hour >= 11 && hour < 18) {
+        greeting = 'こんにちは';
+    } else {
+        greeting = 'こんばんは';
+    }
+    el.textContent = greeting;
+}
 
 /* ------------------------------------------------------------------
  * 作品フィルター（index.html）
