@@ -1,7 +1,7 @@
 {
   "name": "Katz Kawai's GitHub Pages",
   "short_name": "KKLab",
-  "description": "Katz Kawai の個人サイト。Web開発・PWA・モダンフロントエンドの実験場です。",
+  "description": "Katz Kawai の個人サイト。Web開発・PWA・モダンフロントエンド・データビジュアライゼーションの実験場です。",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#f6f7fb",
